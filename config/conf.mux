@@ -1,0 +1,118 @@
+general {
+    dabmode 1
+    nbframes 0
+}
+
+remotecontrol {
+    telnetport 12721
+}
+
+ensemble {
+    id 0xF408
+    ecc 0xE1
+    label "RSAP DAB+"
+    shortlabel "RSAP"
+    international-table 1
+    local-time-offset auto
+}
+
+services {
+    srv_radio1 {
+        label "MAXXIMA"
+        id 0x4DB0
+        pty 10
+        language 0x0F
+    }
+    srv_radio2 {
+        label "F I P"
+        id 0xF204
+        pty 12
+        language 0x0F           
+    }
+    srv_radio3 {
+        label "RTL2"
+        id 0xF215
+        pty 10
+        language 0x0F
+    }
+    srv_radio4 {
+        label "RVM"
+        id 0xF750
+        pty 10
+        language 0x0F
+    }
+}
+
+subchannels {
+    sub_radio1 {
+        type dabplus
+        inputfile "tcp://*:9001"
+        zmq-buffer 96
+        zmq-prebuffering 48
+        bitrate 128
+        id 1
+        protection 3
+    }
+    sub_radio2 {
+        type dabplus
+        inputfile "tcp://*:9002"
+        zmq-buffer 96
+        zmq-prebuffering 48
+        bitrate 128
+        id 2
+        protection 3
+    }
+    sub_radio3 {
+        type dabplus
+        inputfile "tcp://*:9003"
+        zmq-buffer 96
+        zmq-prebuffering 48
+        bitrate 128
+        id 3
+        protection 3
+    }
+    sub_radio4 {
+        type dabplus
+        inputfile "tcp://*:9004"
+        zmq-buffer 96
+        zmq-prebuffering 48
+        bitrate 128
+        id 4
+        protection 3
+    }    
+}
+
+components {
+    comp_radio1 {
+        label "MAXXIMA"
+        shortlabel "MAXXIMA"
+        service srv_radio1
+        subchannel sub_radio1
+        figtype 0x2
+    }
+    comp_radio2 {
+        label "F I P RADIO"
+        shortlabel "F I P"
+        service srv_radio2
+        subchannel sub_radio2
+        figtype 0x2
+    }
+    comp_radio3 {
+        label "RTL2"
+        shortlabel "RTL2"
+        service srv_radio3
+        subchannel sub_radio3
+        figtype 0x2
+    }
+        comp_radio4 {
+        label "RVM ARDENNES"
+        shortlabel "RVM"
+        service srv_radio4
+        subchannel sub_radio4
+        figtype 0x2
+    }
+}
+outputs {
+    zmq "zmq+tcp://*:18081"
+    throttle "simul://" 
+}
