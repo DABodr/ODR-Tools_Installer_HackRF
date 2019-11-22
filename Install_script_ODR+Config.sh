@@ -147,7 +147,8 @@ libvlc-dev vlc-data \
 libfaad2 libfaad-dev \
 python-mako python-requests \
 supervisor \
-pulseaudio \ gqrx-sdr gr-osmosdr hackrf \
+pulseaudio \ 
+gqrx-sdr gr-osmosdr hackrf 
 
 
 
@@ -267,10 +268,6 @@ echo -e "$GREEN Updating ld cache $NORMAL"
 # update ld cache
 sudo ldconfig
 
-echo -e "$GREEN FIFO file for HackRF $NORMAL"
-# update ld cache
-sudo /home/$USER/dab/config/ofdm.fifo
-
 if [ ! -d "/home/$USER/dab/ODR-AudioEnc" ];then
 echo -e "$GREEN Compiling ODR-AudioEnc $NORMAL"
 git clone https://github.com/Opendigitalradio/ODR-AudioEnc.git
@@ -339,6 +336,10 @@ sudo sudo chmod -R 777  /home/$USER/dab/config
 echo
 echo -e "[$GREEN OK $NORMAL]"
 echo
+
+echo -e "$GREEN FIFO file for HackRF $NORMAL"
+# update ld cache
+sudo /home/$USER/dab/config/ofdm.fifo
 
 echo "Supervisor is restarting..."
 sudo /etc/init.d/supervisor start
