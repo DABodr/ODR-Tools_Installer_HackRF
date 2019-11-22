@@ -339,7 +339,7 @@ echo
 
 echo -e "$GREEN FIFO file for HackRF $NORMAL"
 # update ld cache
-sudo /home/$USER/dab/config/ofdm.fifo
+mkfifo /home/$USER/dab/config/ofdm.fifo
 
 echo "Supervisor is restarting..."
 sudo /etc/init.d/supervisor start
