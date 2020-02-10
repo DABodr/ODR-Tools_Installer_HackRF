@@ -158,7 +158,7 @@ sudo apt-get -y install vlc-nox
 
 elif [ "$DISTRO" == "buster" ] ; then
 
-sudo apt-get -y install vlc-plugins-base
+sudo apt-get -y install vlc-plugin-base
 
 fi
 
