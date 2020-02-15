@@ -6,7 +6,7 @@
 * No transmitter needed for listen your mux with DABlin, DAB+ decoder software.
 
  More infos on www.opendigitalradio.org for ODR tools development.               
- Configuration ready for transmit with an HackRF One: https://greatscottgadgets.com/hackrf/
+ Configuration ready to transmit with an HackRF One: https://greatscottgadgets.com/hackrf/
 
 
   * Install:
