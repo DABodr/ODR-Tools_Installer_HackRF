@@ -1,4 +1,4 @@
-# Auto-install ODR tools and HackRF driver for Debian systems
+# Auto-install ODR tools and HackRF drivers for Debian systems
 
 Auto-install script of ODR tools for Buster, Jessie & Stretch distribution and Debian systems. Doesn't work on raspberry PI!!
 
