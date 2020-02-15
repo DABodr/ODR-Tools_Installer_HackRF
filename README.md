@@ -1,4 +1,5 @@
-# ODR DAB installer HackRF
+# Auto-install ODR tools and HackRF driver for Debian systems
+
 Auto-install script of ODR tools for Buster, Jessie & Stretch distribution and Debian systems. Doesn't work on raspberry PI!!
 
 - Latest version of Raspbian stretch is available here: https://downloads.raspberrypi.org/raspbian_full_latest
