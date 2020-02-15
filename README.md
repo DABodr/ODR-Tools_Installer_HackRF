@@ -1,9 +1,12 @@
+* Auto-install script of ODR tools for Buster, Jessie & Stretch distribution.
+* Auto-configuration with system adaptation of a full DAB+ multiplex.                   
+* No transmitter needed for listen your mux with DABlin, DAB+ decoder software.
+
+ More infos on www.opendigitalradio.org for ODR tools development.               
+ Configuration ready for transmit with an HackRF One: https://greatscottgadgets.com/hackrf/
+
 # Auto-install ODR tools and HackRF drivers for Debian systems
 
-Auto-install script of ODR tools for Buster, Jessie & Stretch distribution and Debian systems. Doesn't work on raspberry PI!!
-
-- Latest version of Raspbian stretch is available here: https://downloads.raspberrypi.org/raspbian_full_latest
-- Latest version on Debian stretch is avaible here: https://www.debian.org/releases/stretch/debian-installer/
 
   * Install:
 
