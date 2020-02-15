@@ -20,7 +20,7 @@ echo "  *   ODR-DabMod "
 echo "  *   HackRF drivers "
 echo "  *   DABlin "
 echo "  *   Auxiliary scripts "
-echo "  *   The FDK-AAC library with DAB+ patch "
+echo "  *   The FDK-AACv2 library with DAB+ patch "
 echo "  *   Supervisor (automatisation of all tools) "
 
 #
@@ -255,7 +255,7 @@ fi
 
 if [ ! -d "/home/$USER/dab/fdk-aac" ];then
 echo -e "$GREEN Compiling fdk-aac library $NORMAL"
-git clone https://github.com/Opendigitalradio/fdk-aac.git
+git clone https://github.com/Opendigitalradio/fdk-aac.git -b dabplus2
 pushd fdk-aac
 ./bootstrap
 ./configure
