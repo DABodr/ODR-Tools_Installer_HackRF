@@ -354,6 +354,11 @@ do
   echo
   sudo sed -i -e "s/azerty/$USER/g" "$file"
 done 
+echo
+for file in /home/$USER/dab/config/*.ini
+do
+sudo sed -i -e "s/azerty/$USER/g" "$file"
+done
 echo -e "[$GREEN OK $NORMAL]"
 echo
 echo "Symbolic links creation"
